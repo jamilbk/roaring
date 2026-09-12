@@ -204,3 +204,7 @@ Both-way single-element diffs enumerate the changed container twice. This makes
 diff discovery much slower at 1m/stack despite the tiny result. Dense bulk builds
 also repeatedly allocate growing BEAM integers. These are implementation costs,
 not a fundamental bound on Roaring algorithms; this rerun leaves them unchanged.
+
+## License
+
+Licensed under the [Apache License, Version 2.0](LICENSE).
