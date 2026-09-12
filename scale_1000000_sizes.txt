@@ -1,0 +1,72 @@
+%{
+  full: [
+    {"IPv4",
+     %{
+       members: 1000000,
+       arrays: 0,
+       bitsets: 32,
+       logical_container_payload_bytes: 262144,
+       beam_heap_bytes: 264032,
+       off_heap_binary_bytes: 0,
+       total_bytes: 264032,
+       etf_bytes: 262934
+     }},
+    {"IPv6",
+     %{
+       members: 1000000,
+       arrays: 0,
+       bitsets: 32,
+       logical_container_payload_bytes: 262144,
+       beam_heap_bytes: 264032,
+       off_heap_binary_bytes: 0,
+       total_bytes: 264032,
+       etf_bytes: 262935
+     }},
+    {"both",
+     %{
+       members: 2000000,
+       arrays: 0,
+       bitsets: 64,
+       logical_container_payload_bytes: 524288,
+       beam_heap_bytes: 528064,
+       off_heap_binary_bytes: 0,
+       total_bytes: 528064,
+       etf_bytes: 525870
+     }}
+  ],
+  diff: [
+    {"add_only",
+     %{
+       members: 1,
+       arrays: 1,
+       bitsets: 0,
+       logical_container_payload_bytes: 2,
+       beam_heap_bytes: 248,
+       off_heap_binary_bytes: 0,
+       total_bytes: 248,
+       etf_bytes: 129
+     }},
+    {"remove_only",
+     %{
+       members: 1,
+       arrays: 1,
+       bitsets: 0,
+       logical_container_payload_bytes: 2,
+       beam_heap_bytes: 248,
+       off_heap_binary_bytes: 0,
+       total_bytes: 248,
+       etf_bytes: 129
+     }},
+    {"remove_and_add",
+     %{
+       members: 2,
+       arrays: 2,
+       bitsets: 0,
+       logical_container_payload_bytes: 4,
+       beam_heap_bytes: 320,
+       off_heap_binary_bytes: 0,
+       total_bytes: 320,
+       etf_bytes: 147
+     }}
+  ]
+}

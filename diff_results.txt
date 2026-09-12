@@ -1,0 +1,18 @@
+Single-element diffs, pure Elixir, 10k unique offsets in 2^21
+30 rounds x 100 operations; median/p95 of batch means in microseconds
+
+IPv4
+diff after one add (snapshots prebuilt): median 17.433 us, p95 38.682 us
+diff after one remove (snapshots prebuilt): median 17.565 us, p95 36.035 us
+one add + compute diff: median 15.612 us, p95 28.010 us
+one remove + compute diff: median 16.317 us, p95 25.704 us
+add diff: added=1, removed=0, array payload=2 bytes, ETF tuple=129 bytes, flat BEAM heap=272 bytes
+remove diff: added=0, removed=1, array payload=2 bytes, ETF tuple=129 bytes, flat BEAM heap=272 bytes
+
+IPv6
+diff after one add (snapshots prebuilt): median 17.554 us, p95 19.927 us
+diff after one remove (snapshots prebuilt): median 17.382 us, p95 19.565 us
+one add + compute diff: median 15.634 us, p95 17.335 us
+one remove + compute diff: median 15.408 us, p95 18.980 us
+add diff: added=1, removed=0, array payload=2 bytes, ETF tuple=129 bytes, flat BEAM heap=272 bytes
+remove diff: added=0, removed=1, array payload=2 bytes, ETF tuple=129 bytes, flat BEAM heap=272 bytes

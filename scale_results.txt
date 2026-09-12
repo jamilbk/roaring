@@ -1,0 +1,138 @@
+
+SIZE 100000 PER STACK | Elixir 1.20.0 OTP 29 aarch64-apple-darwin
+5 shuffled rounds, 2 distinct samples/stack; medians of batch-average microseconds
+IPv4 samples prepared and correctness checked
+IPv6 samples prepared and correctness checked
+MEMORY IPv4: %{members: 100000, arrays: 32, bitsets: 0, logical_container_payload_bytes: 200000, beam_heap_bytes: 3424, off_heap_binary_bytes: 200000, total_bytes: 203424, etf_bytes: 200567}
+MEMORY IPv6: %{members: 100000, arrays: 32, bitsets: 0, logical_container_payload_bytes: 200000, beam_heap_bytes: 3424, off_heap_binary_bytes: 200000, total_bytes: 203424, etf_bytes: 200567}
+MEMORY both: %{members: 200000, arrays: 64, bitsets: 0, logical_container_payload_bytes: 400000, beam_heap_bytes: 6848, off_heap_binary_bytes: 400000, total_bytes: 406848, etf_bytes: 401135}
+DIFF SIZE add_only: %{members: 1, arrays: 1, bitsets: 0, logical_container_payload_bytes: 2, beam_heap_bytes: 248, off_heap_binary_bytes: 0, total_bytes: 248, etf_bytes: 129}
+DIFF SIZE remove_only: %{members: 1, arrays: 1, bitsets: 0, logical_container_payload_bytes: 2, beam_heap_bytes: 248, off_heap_binary_bytes: 0, total_bytes: 248, etf_bytes: 129}
+DIFF SIZE remove_and_add: %{members: 2, arrays: 2, bitsets: 0, logical_container_payload_bytes: 4, beam_heap_bytes: 320, off_heap_binary_bytes: 0, total_bytes: 320, etf_bytes: 147}
+100000 IPv4: round 1/5 complete
+100000 IPv4: round 2/5 complete
+100000 IPv4: round 3/5 complete
+100000 IPv4: round 4/5 complete
+100000 IPv4: round 5/5 complete
+IPv4 | build random | median 13797.541 us | min 13581.667 | max 15753.896
+IPv4 | build sorted general API | median 4320.875 us | min 4049.709 | max 4497.646
+IPv4 | build sorted sorted API | median 2821.146 us | min 2656.896 | max 3002.854
+IPv4 | sort only | median 8912.271 us | min 8533.396 | max 9179.604
+IPv4 | sort plus sorted build | median 13702.375 us | min 13446.979 | max 14815.250
+IPv4 | insert one | median 0.595 us | min 0.535 | max 0.603
+IPv4 | remove one | median 0.582 us | min 0.561 | max 0.672
+IPv4 | apply remove plus add | median 1.182 us | min 1.129 | max 1.226
+IPv4 | diff existing old/new both ways | median 254.792 us | min 251.229 | max 310.771
+IPv4 | rebuild random new plus diff | median 14428.250 us | min 14393.313 | max 14689.604
+IPv4 | diff after one add | median 135.917 us | min 131.000 | max 142.010
+IPv4 | diff after one remove | median 135.021 us | min 128.042 | max 141.958
+IPv4 | one add plus compute diff | median 133.760 us | min 128.489 | max 145.844
+IPv4 | one remove plus compute diff | median 140.614 us | min 137.583 | max 150.948
+100000 IPv6: round 1/5 complete
+100000 IPv6: round 2/5 complete
+100000 IPv6: round 3/5 complete
+100000 IPv6: round 4/5 complete
+100000 IPv6: round 5/5 complete
+IPv6 | build random | median 13341.583 us | min 12693.313 | max 13551.584
+IPv6 | build sorted general API | median 4097.313 us | min 3936.771 | max 4379.708
+IPv6 | build sorted sorted API | median 2789.541 us | min 2668.084 | max 2865.688
+IPv6 | sort only | median 8480.041 us | min 8425.021 | max 9174.479
+IPv6 | sort plus sorted build | median 13335.688 us | min 13229.250 | max 13483.416
+IPv6 | insert one | median 0.601 us | min 0.569 | max 0.615
+IPv6 | remove one | median 0.579 us | min 0.574 | max 0.600
+IPv6 | apply remove plus add | median 1.233 us | min 1.192 | max 1.278
+IPv6 | diff existing old/new both ways | median 256.365 us | min 252.979 | max 269.938
+IPv6 | rebuild random new plus diff | median 15232.750 us | min 14746.125 | max 15608.146
+IPv6 | diff after one add | median 149.052 us | min 146.073 | max 154.125
+IPv6 | diff after one remove | median 140.958 us | min 140.271 | max 145.021
+IPv6 | one add plus compute diff | median 138.375 us | min 132.729 | max 139.802
+IPv6 | one remove plus compute diff | median 136.344 us | min 130.063 | max 142.761
+100000 both: round 1/5 complete
+100000 both: round 2/5 complete
+100000 both: round 3/5 complete
+100000 both: round 4/5 complete
+100000 both: round 5/5 complete
+both | build random | median 30041.000 us | min 28991.000 | max 30775.395
+both | build sorted general API | median 10972.396 us | min 10645.750 | max 11548.729
+both | build sorted sorted API | median 6878.750 us | min 6671.688 | max 7045.208
+both | sort only | median 22573.646 us | min 21836.771 | max 23984.688
+both | sort plus sorted build | median 29287.938 us | min 28203.396 | max 30135.396
+both | insert one | median 1.180 us | min 1.143 | max 1.219
+both | remove one | median 1.181 us | min 1.173 | max 1.234
+both | apply remove plus add | median 2.502 us | min 2.449 | max 2.536
+both | diff existing old/new both ways | median 496.229 us | min 488.271 | max 516.177
+both | rebuild random new plus diff | median 40664.688 us | min 40225.166 | max 42468.730
+both | diff after one add | median 278.146 us | min 264.969 | max 283.688
+both | diff after one remove | median 284.969 us | min 280.666 | max 293.583
+both | one add plus compute diff | median 269.791 us | min 266.188 | max 280.781
+both | one remove plus compute diff | median 269.552 us | min 253.281 | max 270.573
+Saved /Users/jamil/tmp/roaring-poc/scale_100000.csv and /Users/jamil/tmp/roaring-poc/scale_100000_sizes.txt
+
+SIZE 1000000 PER STACK | Elixir 1.20.0 OTP 29 aarch64-apple-darwin
+5 shuffled rounds, 2 distinct samples/stack; medians of batch-average microseconds
+IPv4 samples prepared and correctness checked
+IPv6 samples prepared and correctness checked
+MEMORY IPv4: %{members: 1000000, arrays: 0, bitsets: 32, logical_container_payload_bytes: 262144, beam_heap_bytes: 264032, off_heap_binary_bytes: 0, total_bytes: 264032, etf_bytes: 262934}
+MEMORY IPv6: %{members: 1000000, arrays: 0, bitsets: 32, logical_container_payload_bytes: 262144, beam_heap_bytes: 264032, off_heap_binary_bytes: 0, total_bytes: 264032, etf_bytes: 262935}
+MEMORY both: %{members: 2000000, arrays: 0, bitsets: 64, logical_container_payload_bytes: 524288, beam_heap_bytes: 528064, off_heap_binary_bytes: 0, total_bytes: 528064, etf_bytes: 525870}
+DIFF SIZE add_only: %{members: 1, arrays: 1, bitsets: 0, logical_container_payload_bytes: 2, beam_heap_bytes: 248, off_heap_binary_bytes: 0, total_bytes: 248, etf_bytes: 129}
+DIFF SIZE remove_only: %{members: 1, arrays: 1, bitsets: 0, logical_container_payload_bytes: 2, beam_heap_bytes: 248, off_heap_binary_bytes: 0, total_bytes: 248, etf_bytes: 129}
+DIFF SIZE remove_and_add: %{members: 2, arrays: 2, bitsets: 0, logical_container_payload_bytes: 4, beam_heap_bytes: 320, off_heap_binary_bytes: 0, total_bytes: 320, etf_bytes: 147}
+1000000 IPv4: round 1/5 complete
+1000000 IPv4: round 2/5 complete
+1000000 IPv4: round 3/5 complete
+1000000 IPv4: round 4/5 complete
+1000000 IPv4: round 5/5 complete
+IPv4 | build random | median 1120698.937 us | min 1068616.625 | max 1309203.735
+IPv4 | build sorted general API | median 1019157.792 us | min 791116.378 | max 1262477.000
+IPv4 | build sorted sorted API | median 641213.132 us | min 607338.164 | max 1306842.604
+IPv4 | sort only | median 182083.541 us | min 180476.619 | max 201738.541
+IPv4 | sort plus sorted build | median 1247496.563 us | min 932967.333 | max 1476477.992
+IPv4 | insert one | median 1.108 us | min 1.069 | max 1.146
+IPv4 | remove one | median 2.054 us | min 1.908 | max 2.155
+IPv4 | apply remove plus add | median 3.082 us | min 3.064 | max 3.503
+IPv4 | diff existing old/new both ways | median 103300.011 us | min 86260.116 | max 131838.772
+IPv4 | rebuild random new plus diff | median 1516221.583 us | min 1299075.146 | max 1741025.569
+IPv4 | diff after one add | median 47337.431 us | min 42649.255 | max 57930.639
+IPv4 | diff after one remove | median 50573.479 us | min 47743.313 | max 58539.000
+IPv4 | one add plus compute diff | median 65048.813 us | min 63571.646 | max 80425.282
+IPv4 | one remove plus compute diff | median 78998.326 us | min 70452.101 | max 86766.694
+1000000 IPv6: round 1/5 complete
+1000000 IPv6: round 2/5 complete
+1000000 IPv6: round 3/5 complete
+1000000 IPv6: round 4/5 complete
+1000000 IPv6: round 5/5 complete
+IPv6 | build random | median 1121887.573 us | min 1050293.274 | max 1438452.102
+IPv6 | build sorted general API | median 829633.972 us | min 805469.250 | max 1047697.027
+IPv6 | build sorted sorted API | median 711515.922 us | min 621324.226 | max 903986.954
+IPv6 | sort only | median 178461.699 us | min 172646.793 | max 182320.998
+IPv6 | sort plus sorted build | median 1155361.732 us | min 1020141.168 | max 1351473.398
+IPv6 | insert one | median 0.892 us | min 0.852 | max 1.333
+IPv6 | remove one | median 2.175 us | min 1.936 | max 2.294
+IPv6 | apply remove plus add | median 2.885 us | min 2.725 | max 3.226
+IPv6 | diff existing old/new both ways | median 74013.725 us | min 73133.066 | max 82820.250
+IPv6 | rebuild random new plus diff | median 1009475.326 us | min 995653.241 | max 1198450.806
+IPv6 | diff after one add | median 41506.588 us | min 35506.641 | max 44998.255
+IPv6 | diff after one remove | median 51493.592 us | min 46214.921 | max 58872.912
+IPv6 | one add plus compute diff | median 40935.228 us | min 39542.262 | max 44914.224
+IPv6 | one remove plus compute diff | median 50555.111 us | min 47628.065 | max 55572.046
+1000000 both: round 1/5 complete
+1000000 both: round 2/5 complete
+1000000 both: round 3/5 complete
+1000000 both: round 4/5 complete
+1000000 both: round 5/5 complete
+both | build random | median 2219687.569 us | min 2149573.652 | max 2368012.599
+both | build sorted general API | median 2015671.285 us | min 1944153.631 | max 2173540.897
+both | build sorted sorted API | median 1572563.177 us | min 1486668.422 | max 1748617.210
+both | sort only | median 285542.639 us | min 273501.665 | max 326497.962
+both | sort plus sorted build | median 2283793.496 us | min 2242139.805 | max 2315444.152
+both | insert one | median 1.988 us | min 1.946 | max 2.529
+both | remove one | median 3.951 us | min 3.808 | max 4.581
+both | apply remove plus add | median 5.924 us | min 5.787 | max 6.252
+both | diff existing old/new both ways | median 172906.040 us | min 154545.100 | max 177056.128
+both | rebuild random new plus diff | median 2376534.190 us | min 2201019.860 | max 2561651.143
+both | diff after one add | median 82397.942 us | min 77287.248 | max 89459.212
+both | diff after one remove | median 101839.466 us | min 93531.561 | max 106482.706
+both | one add plus compute diff | median 83675.910 us | min 76533.119 | max 86589.717
+both | one remove plus compute diff | median 102766.854 us | min 92284.135 | max 123628.439
+Saved /Users/jamil/tmp/roaring-poc/scale_1000000.csv and /Users/jamil/tmp/roaring-poc/scale_1000000_sizes.txt

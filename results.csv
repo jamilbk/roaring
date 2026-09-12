@@ -1,0 +1,31 @@
+range,operation,median_us,p95_batch_us,min_us
+100.64.0.0/11,build / random,1314.104,1390.818,1246.855
+100.64.0.0/11,build / sorted (general API),873.234,964.678,829.582
+100.64.0.0/11,build / sorted (sorted API),821.607,871.580,772.323
+100.64.0.0/11,sort only,1053.128,1117.465,986.577
+100.64.0.0/11,sort + sorted build,1316.387,1423.883,1247.415
+100.64.0.0/11,insert one absent offset,0.831,1.188,0.730
+100.64.0.0/11,remove one present offset,0.797,1.051,0.707
+100.64.0.0/11,apply known remove + add,1.219,1.454,1.087
+100.64.0.0/11,diff existing old/new (both ways),124.297,131.244,119.020
+100.64.0.0/11,rebuild random new + diff,1341.970,1432.127,1286.153
+fd00:2021:1111::/107,build / random,1347.865,1390.275,1294.675
+fd00:2021:1111::/107,build / sorted (general API),890.594,921.957,858.585
+fd00:2021:1111::/107,build / sorted (sorted API),838.410,856.385,805.775
+fd00:2021:1111::/107,sort only,1071.458,1105.720,1025.851
+fd00:2021:1111::/107,sort + sorted build,1347.274,1376.503,1303.343
+fd00:2021:1111::/107,insert one absent offset,0.835,0.992,0.707
+fd00:2021:1111::/107,remove one present offset,0.793,0.942,0.626
+fd00:2021:1111::/107,apply known remove + add,1.227,1.560,1.050
+fd00:2021:1111::/107,diff existing old/new (both ways),125.003,131.988,120.179
+fd00:2021:1111::/107,rebuild random new + diff,1389.294,1411.820,1339.336
+both,build / random,2701.612,3133.573,2610.489
+both,build / sorted (general API),1833.992,2102.639,1763.502
+both,build / sorted (sorted API),1732.732,1966.462,1682.351
+both,sort only,2166.420,2402.119,2106.310
+both,sort + sorted build,2699.524,3089.353,2609.923
+both,insert one absent offset,1.702,2.421,1.493
+both,remove one present offset,1.571,2.764,1.415
+both,apply known remove + add,2.595,4.148,2.196
+both,diff existing old/new (both ways),251.580,263.939,240.838
+both,rebuild random new + diff,2775.311,3351.109,2676.310

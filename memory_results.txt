@@ -1,0 +1,33 @@
+Elixir 1.20.0, OTP 29, word bytes 8
+IPv4: %{
+  containers: 32,
+  offsets: 10000,
+  array_payload_bytes: 20000,
+  referenced_binary_bytes: 20000,
+  beam_heap_words: 428,
+  beam_heap_bytes: 3424,
+  heap_plus_binary_bytes: 23424,
+  etf_bytes: 20567
+}
+IPv6: %{
+  containers: 32,
+  offsets: 10000,
+  array_payload_bytes: 20000,
+  referenced_binary_bytes: 20000,
+  beam_heap_words: 428,
+  beam_heap_bytes: 3424,
+  heap_plus_binary_bytes: 23424,
+  etf_bytes: 20567
+}
+Both: %{
+  containers: 64,
+  offsets: 20000,
+  array_payload_bytes: 40000,
+  referenced_binary_bytes: 40000,
+  beam_heap_words: 856,
+  beam_heap_bytes: 6848,
+  heap_plus_binary_bytes: 46848,
+  etf_bytes: 41135
+}
+Isolated owner after GC: [memory: 13816, heap_size: 1598, total_heap_size: 1598]
+Owner off-heap binaries: %{referenced_binary_bytes: 40000, binary_count: 64}

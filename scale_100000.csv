@@ -1,0 +1,43 @@
+entries_per_stack,stack,operation,median_us,min_batch_us,max_batch_us,rounds,corpus,repeats
+100000,IPv4,build random,13797.541,13581.667,15753.896,5,2,1
+100000,IPv4,build sorted general API,4320.875,4049.709,4497.646,5,2,1
+100000,IPv4,build sorted sorted API,2821.146,2656.896,3002.854,5,2,1
+100000,IPv4,sort only,8912.271,8533.396,9179.604,5,2,1
+100000,IPv4,sort plus sorted build,13702.375,13446.979,14815.250,5,2,1
+100000,IPv4,insert one,0.595,0.535,0.603,5,2,500
+100000,IPv4,remove one,0.582,0.561,0.672,5,2,500
+100000,IPv4,apply remove plus add,1.182,1.129,1.226,5,2,500
+100000,IPv4,diff existing old/new both ways,254.792,251.229,310.771,5,2,2
+100000,IPv4,rebuild random new plus diff,14428.250,14393.313,14689.604,5,2,1
+100000,IPv4,diff after one add,135.917,131.000,142.010,5,2,2
+100000,IPv4,diff after one remove,135.021,128.042,141.958,5,2,2
+100000,IPv4,one add plus compute diff,133.760,128.489,145.844,5,2,2
+100000,IPv4,one remove plus compute diff,140.614,137.583,150.948,5,2,2
+100000,IPv6,build random,13341.583,12693.313,13551.584,5,2,1
+100000,IPv6,build sorted general API,4097.313,3936.771,4379.708,5,2,1
+100000,IPv6,build sorted sorted API,2789.541,2668.084,2865.688,5,2,1
+100000,IPv6,sort only,8480.041,8425.021,9174.479,5,2,1
+100000,IPv6,sort plus sorted build,13335.688,13229.250,13483.416,5,2,1
+100000,IPv6,insert one,0.601,0.569,0.615,5,2,500
+100000,IPv6,remove one,0.579,0.574,0.600,5,2,500
+100000,IPv6,apply remove plus add,1.233,1.192,1.278,5,2,500
+100000,IPv6,diff existing old/new both ways,256.365,252.979,269.938,5,2,2
+100000,IPv6,rebuild random new plus diff,15232.750,14746.125,15608.146,5,2,1
+100000,IPv6,diff after one add,149.052,146.073,154.125,5,2,2
+100000,IPv6,diff after one remove,140.958,140.271,145.021,5,2,2
+100000,IPv6,one add plus compute diff,138.375,132.729,139.802,5,2,2
+100000,IPv6,one remove plus compute diff,136.344,130.063,142.761,5,2,2
+100000,both,build random,30041.000,28991.000,30775.395,5,2,1
+100000,both,build sorted general API,10972.396,10645.750,11548.729,5,2,1
+100000,both,build sorted sorted API,6878.750,6671.688,7045.208,5,2,1
+100000,both,sort only,22573.646,21836.771,23984.688,5,2,1
+100000,both,sort plus sorted build,29287.938,28203.396,30135.396,5,2,1
+100000,both,insert one,1.180,1.143,1.219,5,2,500
+100000,both,remove one,1.181,1.173,1.234,5,2,500
+100000,both,apply remove plus add,2.502,2.449,2.536,5,2,500
+100000,both,diff existing old/new both ways,496.229,488.271,516.177,5,2,2
+100000,both,rebuild random new plus diff,40664.688,40225.166,42468.730,5,2,1
+100000,both,diff after one add,278.146,264.969,283.688,5,2,2
+100000,both,diff after one remove,284.969,280.666,293.583,5,2,2
+100000,both,one add plus compute diff,269.791,266.188,280.781,5,2,2
+100000,both,one remove plus compute diff,269.552,253.281,270.573,5,2,2
